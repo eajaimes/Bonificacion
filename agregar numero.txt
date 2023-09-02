@@ -1,0 +1,28 @@
+Nodo 
+Nodo.value
+Nodo.previous
+Nodo.next
+
+
+Nodo aggNodoLista(Nodo lista, Nodo vi):
+  if(lista==null):
+    return vi
+  end if
+  if (vi.value == lista.value):
+    print("El número ya existe")
+    return lista  
+  end if
+  elif (vi.value < lista.value):
+    aux1=lista.previous
+    lista.previous = vi
+    vi.next = lista
+    vi.previous = aux
+  end if
+  elif (lista.next == None):
+    lista.next = vi
+    vi.previous = lista
+  else:
+      aggNodoLista(Nodo lista.next, Nodo vi)
+  end if
+end 
+    
